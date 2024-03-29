@@ -1,0 +1,115 @@
+.sonny_progressbar {
+	margin-bottom: 16px;
+}
+.sonny_progressbar p.title {
+	font-size: 18px;
+	line-height: 20px;
+	margin: 0;
+	padding: 10px 0;
+}
+.sonny_progressbar .bar-container {
+	position: relative;
+	height: 40px;
+	border-radius: 25px;
+}
+.sonny_progressbar .bar-container.shadow {
+	-moz-box-shadow: 0px 5px 7px -3px rgba(0,0,0,.5);
+	-webkit-box-shadow: 0px 5px 7px -3px rgba(0,0,0,.5);
+	box-shadow: 0px 5px 7px -3px rgba(0,0,0,.5);
+}
+.sonny_progressbar .backgroundBar {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.sonny_progressbar .bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	border-radius: 25px;
+}
+.sonny_progressbar .targetBar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	-webkit-animation: Animation 2s infinite ease-in-out;
+	-moz-animation: Animation 2s infinite ease-in-out;
+	animation: Animation 2s infinite ease-in-out;
+}
+.sonny_progressbar .targetBar.loader {
+	-webkit-animation: AnimationB 4s infinite ease-in-out;
+	-moz-animation: AnimationB 4s infinite ease-in-out;
+	animation: AnimationB 4s infinite ease-in-out;
+	background-image: url('animated-overlay.gif');
+}
+.sonny_progressbar .bar-container.border .bar, .sonny_progressbar .bar-container.border .targetBar, .sonny_progressbar .bar-container.border .backgroundBar {
+	border-bottom: 3px solid rgba(0,0,0,.2);
+}
+.sonny_progressbar .progress-percent {
+	font-size: 20px;
+	position: absolute;
+	right: 15px;
+	top:-24px;
+}
+
+@keyframes Animation {
+  0%   { opacity:.4; }
+  50%   { opacity:1; }
+  100% { opacity:.4; }
+}
+@-moz-keyframes Animation{
+  0%   { opacity:.4; }
+  50%   { opacity:1; }
+  100% { opacity:.4; }
+}
+@-webkit-keyframes Animation{
+  0%   { opacity:.4; }
+  50%   { opacity:1; }
+  100% { opacity:.4; }
+}
+@keyframes AnimationB {
+  0%   { opacity:.01; }
+  50%   { opacity:.1; }
+  100% { opacity:.01; }
+}
+@-moz-keyframes AnimationB {
+  0%   { opacity:.01; }
+  50%   { opacity:.1; }
+  100% { opacity:.01; }
+}
+@-webkit-keyframes AnimationB {
+  0%   { opacity:.01; }
+  50%   { opacity:.1; }
+  100% { opacity:.01; }
+}
+
+.pace-cover {
+	background-image: url(https://cdn.shopify.com/s/files/1/0601/7980/8508/files/example-white-logo.png?v=1672563705);
+    background-color: black;
+}
+
+.pace {  z-index: 2000000004;  position: fixed;  height: 100vh;  width: 100%;  top: 0;  left: 0 }
+.pace-cover {
+    z-index: 2000000003;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;  left: 0;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: all .5s cubic-bezier(0.7,0,0.3,1);
+    background-color: #000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 200px;
+}
+.pace-progress {  z-index: 2000000005; position: absolute;  width: 100%;  height: 5px;  right: 100%;  top: 0;  background: #fff;  }
+.pace-inactive, .pace-done  .pace-cover {  background: #f2f2f2;  height: 0;  }
+.pace-inactive .pace-progress{  display: none;  }
