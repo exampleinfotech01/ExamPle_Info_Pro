@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /index.html
+Disallow: /blog.html
+Disallow: /blog-details.html
+Disallow: /faq.html
+Disallow: /category.html
+
+Allow: 
+
+Sitemap: https://www.exampleinfotech.in/sitemap.xml
