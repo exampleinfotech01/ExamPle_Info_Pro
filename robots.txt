@@ -4,6 +4,7 @@ Disallow: /blog.html
 Disallow: /blog-details.html
 Disallow: /faq.html
 Disallow: /category.html
+Disallow: /client.html
 
 Allow: 
 
