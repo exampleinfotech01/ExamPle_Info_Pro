@@ -113,3 +113,56 @@
 .pace-progress {  z-index: 2000000005; position: absolute;  width: 100%;  height: 5px;  right: 100%;  top: 0;  background: #fff;  }
 .pace-inactive, .pace-done  .pace-cover {  background: #f2f2f2;  height: 0;  }
 .pace-inactive .pace-progress{  display: none;  }
+
+
+/* CSS NEW SLIDER START */
+.trusted-partners-slider {
+    display: flex;
+    align-items: center;
+}
+.trusted-partners-title {
+    width: 100%;
+    max-width: 30%;
+}
+.partner_logo {
+    width: 100%;
+    max-width: 70%;
+}
+.trusted-partners h2{
+	background: linear-gradient(45deg, #000000, #3e8ed0);
+	-webkit-background-clip: text;
+	color: transparent;
+    font-size: 40px;
+}
+.bg-partner{
+	background: #eeeeee;
+    padding: 20px 0;
+}
+@media screen and (min-width:768px) and (max-width: 1050px)  {
+	.trusted-partners-title{
+		width: 100%;
+		max-width: 40%;
+	}
+	.partner_logo{
+		width: 100%;
+		max-width: 60%;
+	}
+	.trusted-partners h2 {
+        font-size: 34px;
+    }
+}
+@media (max-width: 767px) {
+	.trusted-partners-title,
+	.partner_logo{
+		width: 100%;
+		max-width: 50%;
+	}
+	.trusted-partners {
+		text-align: center;
+	}
+	.trusted-partners h2 {
+		font-size: 25px;
+	}
+}
+
+/* CSS NEW SLIDER END */
