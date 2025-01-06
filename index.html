@@ -1050,6 +1050,25 @@
       });
   </script>
 
+<script>
+  // This script will run on every page to remove .html from the URL if present
+  window.onload = function() {
+    var currentPath = window.location.pathname;
+
+    // Check if the URL ends with .html
+    if (currentPath.endsWith('.html')) {
+      // Remove the .html extension from the URL
+      var cleanUrl = currentPath.substring(0, currentPath.lastIndexOf('.html'));
+
+      // Redirect to the clean URL without .html
+      window.location.replace(cleanUrl);
+    }
+  };
+</script>
+
+
+
+
 </body>
 
 </html>
