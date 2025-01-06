@@ -992,22 +992,18 @@
   <script src="assets/js/main.js"></script>
 
   <script>
-    if (window.location.pathname.endsWith('/')) {
-      window.location.pathname = window.location.pathname + '.html';
-    }
+    // If the URL ends with .html, remove it and redirect
+    window.onload = function() {
+      var currentPath = window.location.pathname;
+  
+      // Check if the URL ends with .html
+      if (currentPath.endsWith('.html')) {
+        var cleanUrl = currentPath.substring(0, currentPath.lastIndexOf('.html'));
+        // Redirect to the clean URL without .html
+        window.location.replace(cleanUrl);
+      }
+    };
   </script>
-<script>
-  // Check if the URL ends with a slash (or doesn't have .html) and redirect
-  window.onload = function() {
-    var currentPath = window.location.pathname;
-
-    // Check if the URL doesn't end with '.html' and doesn't already have a trailing slash
-    if (currentPath !== '/' && !currentPath.endsWith('.html') && !currentPath.endsWith('/')) {
-      // Add .html at the end and redirect
-      window.location.pathname = currentPath + '.html';
-    }
-  };
-</script>
 
 
 
