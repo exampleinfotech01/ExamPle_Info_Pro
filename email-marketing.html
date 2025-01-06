@@ -523,7 +523,19 @@
   <script src="assets/js/chroma.min.js"></script>
   <script src="assets/js/jquery.meanmenu.min.js"></script>
   <script src="assets/js/main.js"></script>
-
+  <script>
+    // If the URL ends with .html, remove it and redirect
+    window.onload = function() {
+      var currentPath = window.location.pathname;
+  
+      // Check if the URL ends with .html
+      if (currentPath.endsWith('.html')) {
+        var cleanUrl = currentPath.substring(0, currentPath.lastIndexOf('.html'));
+        // Redirect to the clean URL without .html
+        window.location.replace(cleanUrl);
+      }
+    };
+  </script>
 
 </body>
 
